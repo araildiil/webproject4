@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 4 - Registration Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">FORMS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Task 0</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="validation.html">Task 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bootstrap-form.html">Task 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bootstrap-validation.html">Task 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="registration.html">Task 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-5" style="max-width: 760px">
+      <h1 class="page-title">Registration Form</h1>
+      <p class="page-sub">
+        Task 4 - responsive Bootstrap grid, HTML5 validation and Bootstrap
+        feedback.
+      </p>
+
+      <form id="registerForm" class="card-form" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              required
+              minlength="2"
+              maxlength="30"
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+              First name is required (min 2 characters).
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              required
+              minlength="2"
+              maxlength="30"
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+              Last name is required (min 2 characters).
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+              Please enter a valid email address.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              required
+              minlength="8"
+              pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
+              aria-describedby="passwordHelp"
+            />
+            <div id="passwordHelp" class="form-text">
+              Minimum 8 characters, letters and digits.
+            </div>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+              Password must be at least 8 characters with a letter and a digit.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="confirmPassword" class="form-label"
+              >Confirm password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="confirmPassword"
+              required
+            />
+            <div class="valid-feedback">Passwords match.</div>
+            <div class="invalid-feedback" id="confirmFeedback">
+              Please confirm your password.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label d-block">Gender</label>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+                required
+              />
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+                required
+              />
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="other"
+                value="other"
+                required
+              />
+              <label class="form-check-label" for="other">Other</label>
+            </div>
+            <div class="invalid-feedback">Please select a gender.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="country" class="form-label">Country</label>
+            <select class="form-select" id="country" required>
+              <option value="" selected disabled>Choose...</option>
+              <option>Kazakhstan</option>
+              <option>Uzbekistan</option>
+              <option>Kyrgyzstan</option>
+              <option>Turkey</option>
+              <option>Other</option>
+            </select>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please select a country.</div>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label d-block">Hobbies</label>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input hobby"
+                type="checkbox"
+                id="hobbyCoding"
+                value="coding"
+              />
+              <label class="form-check-label" for="hobbyCoding">Coding</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input hobby"
+                type="checkbox"
+                id="hobbyMusic"
+                value="music"
+              />
+              <label class="form-check-label" for="hobbyMusic">Music</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input hobby"
+                type="checkbox"
+                id="hobbySport"
+                value="sport"
+              />
+              <label class="form-check-label" for="hobbySport">Sport</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input hobby"
+                type="checkbox"
+                id="hobbyReading"
+                value="reading"
+              />
+              <label class="form-check-label" for="hobbyReading">Reading</label>
+            </div>
+            <div class="text-danger small mt-1 d-none" id="hobbiesFeedback">
+              Select at least one hobby.
+            </div>
+          </div>
+
+          <div class="col-12 d-flex gap-2">
+            <button type="submit" class="btn btn-dark px-4">Submit</button>
+            <button type="reset" class="btn btn-outline-dark px-4">
+              Reset
+            </button>
+          </div>
+
+          <div class="col-12">
+            <div
+              id="successMessage"
+              class="alert alert-secondary d-none mb-0"
+              role="alert"
+            >
+              Registration completed successfully.
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="container">
+        Assignment #4 - Forms and Validation | Arailym Amangeldi, SE-2528
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/registration.js"></script>
+  </body>
+</html>

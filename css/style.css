@@ -1,0 +1,114 @@
+:root {
+  --black: #111111;
+  --gray-800: #2b2b2b;
+  --gray-600: #6b6b6b;
+  --gray-300: #d4d4d4;
+  --gray-100: #f4f4f4;
+  --white: #ffffff;
+}
+
+body {
+  background: var(--gray-100);
+  color: var(--black);
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar {
+  background: var(--black);
+}
+.navbar .nav-link {
+  color: var(--gray-300);
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--white);
+}
+.navbar-brand {
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+.page-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.page-sub {
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+
+.card-form {
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  padding: 28px;
+}
+
+.plain-form label {
+  display: block;
+  margin: 14px 0 4px;
+  font-weight: 500;
+}
+.plain-form input,
+.plain-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--gray-600);
+  border-radius: 2px;
+  background: var(--white);
+}
+.plain-form input:focus,
+.plain-form textarea:focus {
+  outline: 2px solid var(--black);
+}
+.plain-form button {
+  margin-top: 18px;
+  padding: 8px 22px;
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 2px;
+}
+.plain-form button:hover {
+  background: var(--gray-800);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--black);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.12);
+}
+.form-check-input:checked {
+  background-color: var(--black);
+  border-color: var(--black);
+}
+.form-check-input:focus {
+  border-color: var(--black);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.12);
+}
+.btn-dark {
+  background: var(--black);
+  border-color: var(--black);
+}
+.btn-dark:hover {
+  background: var(--gray-800);
+  border-color: var(--gray-800);
+}
+.btn-outline-dark:hover {
+  background: var(--black);
+}
+
+footer {
+  border-top: 1px solid var(--gray-300);
+  color: var(--gray-600);
+  font-size: 14px;
+  padding: 16px 0;
+  background: var(--white);
+}
